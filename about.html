@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+    <title>Document</title>
+
+    <style>
+            nav{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 100px;
+            background-color: rgb(41, 41, 78);
+            
+            
+        }
+        nav ul{
+            display: flex;
+            /* justify-content: center; */
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 23px ;
+        }
+        nav ul li a{
+            text-decoration: none;
+            margin: 0 23px ;
+            color:white;
+        }
+        nav ul li a:hover{
+            color:rgb(117, 117, 186) ;
+        }
+
+        .left{
+            font-size: 2vw;
+            color: white;
+           
+        }
+        .right{
+            font-size: 1.5vw;
+        }
+        .nav{
+            display: inline-block;
+        }
+        .mobile-navbar-btn{
+            display: none;
+        }
+        body{
+            background-color: rgb(59, 59, 124);
+            color: white;
+            font-family: 'Gill Sans MT', 'sans-serif';
+            overflow-x: hidden;
+            height: calc(100% - 100px);
+        }
+        body p{
+            font-size:1.5vw;
+        }
+
+        /* Make sure that padding behaves as expected */
+* {box-sizing:border-box}
+
+/* Container for skill bars */
+.container {
+  width: 60%; /* Full width */
+  background-color: #ddd; /* Grey background */
+}
+
+.skills {
+  text-align: right; /* Right-align text */
+  padding-top: 10px; /* Add top padding */
+  padding-bottom: 10px; /* Add bottom padding */
+  color: white; /* White text color */
+  height: 10px;
+}
+
+.mobile-nav-icon{
+    height: 2.5rem;
+    width: 3rem;
+
+}
+.mobile-navbar-btn{
+    display: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+.mobile-nav-icon[name="close-outline"]{
+    display: none;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+
+}
+body .content{
+    padding: 5vw 4vw;
+}
+
+
+@media (max-width: 62em) {
+    body p{
+        font-size: 5vw;
+        margin-top: 23vh;
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    .left{
+
+font-size: 6vw;    
+ }
+
+ .header{
+     position: relative;
+     font-size: 6vw;
+
+
+ }
+
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid white;
+        color: white;
+
+    }
+
+    .right{
+        /* display: none; */
+        font-size: 25px;
+        width: 40%;
+        height:30vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 43vh;
+        left: 25vh;
+                /* to get the transtition */
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background-color: grey;
+        border-radius: 2px;
+
+    }
+   
+
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .active .right{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]
+    {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"]
+    {
+        display: none;
+    }
+    
+
+}
+
+
+
+
+ 
+
+
+
+
+.html {width: 90%; background-color: #04AA6D;} /* Green */
+.css {width: 80%; background-color: #2196F3;} /* Blue */
+.js {width: 65%; background-color: #f44336;} /* Red */
+.php {width: 60%; background-color: #808080;} /* Dark Grey */
+.python {width: 70%; background-color: #7420b9;} /* Dark Grey */
+.java {width: 60%; background-color: #b9c348;} /* Dark Grey */
+
+
+    </style>
+</head>
+<body>
+    <header class="header" >
+            <nav>
+                <div class="left">Srishti's Portfolio</div>
+                <div class="right">
+                    <ul>
+                        <li><a href="/">Home </a></li>
+                        <li><a href="/about.html">About</a></li>
+                        <li><a href="/services.html">Services</a></li>
+                        <li><a href="/project.html">Projects</a></li>
+                        <li> <a href="/contact.html">Contact Me</a></li>
+                    </ul>
+                </div>
+                <div class="mobile-navbar-btn">
+                    <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+                    <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+            </div>
+        </nav>
+
+    </header>
+    <div class="content">
+        <h1 style="font-size: 6vw;">Let me introduce myself</h1>
+        <p><i>I’ve started to accept the results as it is because my Lord Krishna made me realize the importance of Karma rather than results.</p>
+
+        </i></h1>
+        <p>I am a recent graduate eager to embark on a career in the technology field. I have acquired proficiency in programming languages such as Python, Java, and C++, as well as web development technologies such as HTML, CSS, and JavaScript. In addition, I have completed a course in data science with Python, which has further helped me develop a strong analytical mindset.
+    
+            I am always looking to enhance my skill set and broaden my knowledge, so I am currently learning about cybersecurity. Having knowledge of cyber security is crucial in today's digital age, and it will not only help me secure my own data but also contribute to building a secure online environment for everyone.
+            
+            As a self-motivated individual, I am always driven to deliver results and to make an impact in everything I do. I am constantly seeking challenges and opportunities to grow my skills both professionally and personally. I am excited to leverage my skills and knowledge to bring value to the organization I will join.</p>
+            <p>Python</p>
+            <div class="container">
+              <div class="skills python">70%</div>
+            </div>
+            <p>JAVA</p>
+            <div class="container">
+              <div class="skills java">60%</div>
+            </div>
+            
+            
+    
+            <p>HTML</p>
+            <div class="container">
+              <div class="skills html">90%</div>
+            </div>
+            
+            <p>CSS</p>
+            <div class="container">
+              <div class="skills css">80%</div>
+            </div>
+            
+            <p>JavaScript</p>
+            <div class="container">
+              <div class="skills js">65%</div>
+            </div>
+            
+            <p>PHP</p>
+            <div class="container">
+              <div class="skills php">60%</div>
+            </div>
+    
+    
+            <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    
+            <script src="index.js"></script>
+            
+   
+    </div>
+
+
+    
+</body>
+</html>
+

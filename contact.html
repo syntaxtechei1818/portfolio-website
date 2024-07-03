@@ -1,0 +1,220 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    
+     nav{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(41, 41, 78);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px ;
+        }
+        nav ul li a{
+            text-decoration: none;
+            margin: 0 23px ;
+            color:white;
+        }
+        nav ul li a:hover{
+            color:rgb(117, 117, 186) ;
+        }
+        .mobile-navbar-btn{
+            display: none;
+        }
+
+        .left{
+            font-size: 2rem;
+            color: white;
+           
+        }
+        .right{
+            font-size: 1.5vw;
+        }
+   h1{
+
+    
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        margin: 5%;
+        color: rgb(217, 99, 117);
+    
+    }
+    .form .labels{
+        padding: 40px ;
+        margin-right: 30px;
+        font-size: 22px;
+        
+    }
+    .form .inputs{
+        padding: 5px ;
+        margin-left :30px;
+        margin-top: 7px;
+        margin-bottom: 20px;
+        width: 40vw;
+        border-radius: 3px;
+        border-width: 2px;
+        font-size: 20px;
+        border-radius: 6px;
+
+    }
+    
+@media (max-width: 600px) {
+    body p{
+        font-size: 5vw;
+    }
+    .left{
+
+font-size: 6vw;    
+ }
+
+ .header{
+     position: relative;
+     font-size: 6vw;
+
+
+ }
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid white;
+        color: white;
+
+    }
+       
+    .right{
+        /* display: none; */
+        font-size: 25px;
+        width: 40%;
+        height:30vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 43vh;
+        left: 25vh;
+                /* to get the transtition */
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background-color: grey;
+        border-radius: 2px;
+
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .active .right{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]
+    {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"]
+    {
+        display: none;
+    }
+    
+
+}
+    
+
+
+     body{
+        background-color: rgb(59, 59, 124);
+            color: white;
+            font-family: 'Gill Sans MT', 'sans-serif';
+     }
+</style>
+<body>
+
+    <header class="header active" >
+        <nav>
+            <div class="left">Srishti's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home </a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/project.html">Projects</a></li>
+                    <li> <a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="mobile-navbar-btn">
+                <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+                <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
+    </nav>
+
+</header>
+
+    <div style="text-align: center;"><h1>Contact me</h1>
+    </div>
+    <div class="form">
+        <form>
+            <label class="labels"  for="name">Enter your full Name</label><br>
+            <input class="inputs" type="text" id="name" name="name" placeholder="Your name"><br>
+            <label class="labels" for="email">Enter your Email</label><br>
+            <input class="inputs" type="email" id="email" name="email" placeholder="Your email"><br>
+
+            <label class="labels"  for="Phone.no">Enter your Phone Number</label><br>
+            <input class="inputs"type="Phone" id="phn" name="phn" placeholder="Your Phone no."><br>
+            <label class="labels"  for="Message">Write your message</label><br>
+            <input class="inputs"type="text" id="msg" name="msg" placeholder="Type message" style="height: 10vw;
+           "><br>
+
+
+            <button type="submit" class="btn" style="background-color: rgb(243, 116, 135); 
+            padding: 10px;
+            width: 110px;
+            border-style: solid;
+            border-radius: 6px;
+            margin-top: 10px;
+            margin-left: 30px;">
+            Submit</button>
+
+
+
+        </form>
+    </div>
+
+
+
+
+
+    </div>
+
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="index.js"></script>
+    
+</body>
+</html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Srishti-Developer Portfolio</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+        }
+
+        body {
+            background-color: rgb(59, 59, 124);
+            color: white;
+            font-family: 'Gill Sans MT', 'sans-serif';
+
+        }
+
+
+        nav{
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 90px;
+            background-color: rgb(41, 41, 78);
+        }
+        nav ul{
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li{
+            list-style: none;
+            margin: 0 23px ;
+        }
+        nav ul li a{
+            text-decoration: none;
+            margin: 0 23px ;
+            color:white;
+        }
+        nav ul li a:hover{
+            color:rgb(117, 117, 186) ;
+        }
+
+    
+    .mobile-navbar-btn{
+        display: none;
+    }
+
+
+        .left{
+            font-size: 2vw;
+           
+        }
+        .right{
+            font-size: 1.5vw;
+        }
+        .firstSection{
+            display: flex;
+            justify-content:space-between;
+            margin: 15px 0;
+        }
+        .firstSection .leftSection{
+            align-items: center;
+
+
+        }
+        .rightSection{
+            margin-bottom: 0;
+            padding-bottom: 0;
+
+            /* background-color: rgb(231, 214, 214); */
+        }
+        .rightSection img{
+            margin:20px;
+            border-radius: 7px;
+            border-style: solid;
+            border-width: 14px;
+            border-color: white;
+            height: auto;
+            height: 65%;
+            width: 60%;
+            margin-left: 15vw;
+        }
+        .leftSection{
+            font-size:40px;
+            margin: 60px;
+        }
+        .leftSection .btn{
+            padding: 12px;
+            border-style: solid;
+            background-color:  rgb(24, 24, 45);
+            color: white;
+            border-radius: 5px;
+            border-color: white;
+            font-size: 14px;
+            cursor: pointer;
+        } 
+        #element{
+            color: rgb(223, 113, 129);
+        }
+
+        .secondSection{
+            max-width: 80vw;
+            margin: auto;
+            height: 300px;
+
+
+        }
+        .secondSection h1{
+            font-size: 1.9rem;
+        }
+
+        main hr{
+            margin: 60px 84px;
+            margin-top: 0;
+            padding-top: 0;
+        }
+
+       
+        
+        table{
+            border-collapse: collapse;
+            text-align: center;
+
+        }
+        table th, td{
+            border: solid;
+            border-width: 2px;
+            border-color: white;
+            width:25%;
+            padding: 8px;
+            vertical-align: middle;
+        }
+        footer{
+            background-color: rgb(242, 131, 148);
+            padding: 55px 122px;
+
+        }
+        .footer{
+            display: flex;
+            padding: 23px 122px;
+            justify-content: space-evenly;
+        }
+        footer .footer-right{
+            text-align: center;
+            color: grey;
+        }
+
+
+        
+@media (max-width: 600px) {
+    body p{
+        font-size: 5vw;
+    }
+    .left{
+
+   font-size: 6vw;    
+    }
+
+    .header{
+        position: relative;
+        font-size: 6vw;
+
+
+    }
+
+
+    .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+        border: 3px solid white;
+        color: white;
+
+    }
+
+    .right{
+        /* display: none; */
+        font-size: 25px;
+        width: 40%;
+        height:30vh;
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: 43vh;
+        left: 25vh;
+                /* to get the transtition */
+
+        transform: translateX(100%);
+        transition: all 0.5s linear;
+
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        background-color: grey;
+        border-radius: 2px;
+
+    }
+    .right img{
+        width: 100%;
+        height: auto;
+        
+    }
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+
+
+    }
+
+    .active .right{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto;
+    }
+    .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]
+    {
+        display: block;
+    }
+
+    .active .mobile-navbar-btn .mobile-nav-icon[name="menu-outline"]
+    {
+        display: none;
+
+    }
+
+    .firstSection{
+        display: flex;
+        flex-wrap: wrap;
+        
+    }
+    
+
+}
+   
+
+    </style>
+</head>
+<body>
+
+    <header class="header" >
+        <nav>
+            <div class="left">Srishti's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="/">Home </a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/services.html">Services</a></li>
+                    <li><a href="/project.html">Projects</a></li>
+                    <li> <a href="/contact.html">Contact Me</a></li>
+                </ul>
+            </div>
+            <div class="mobile-navbar-btn">
+                <ion-icon name="menu-outline" class="mobile-nav-icon"></ion-icon>
+                <ion-icon name="close-outline" class="mobile-nav-icon"></ion-icon>
+        </div>
+    </nav>
+
+</header>
+
+    <main>
+        <section class="firstSection">
+            <div class="leftSection">Hey! My name is <span style="color:rgb(231, 125, 141);";>Srishti</span>
+                <div>  and I'm a passionate 
+                </div>
+                <span id="element"></span>
+                <div class="buttons">
+                    <button class="btn" onclick="location.href='Srishti_Singh_Resume.pdf';">Download Resume</button>
+                    <a href="https://github.com/srishtigitcode">  <button class="btn" style="background-color: grey;">Visit Github</button></a>
+                    <a href="https://www.youtube.com/@code_syntax/featured"><button class="btn" style="background-color: rgb(110, 39, 51);">Youtube Channel</button></a>
+                </div>
+
+            </div>
+            <div class="rightSection">
+                <img src="img.jpg";
+            ></div>
+
+        </section>
+        <hr>
+        <section class="secondSection">
+            <h1>Academia</h1>
+            <table>
+                <tr>
+                    <th>School/College</th>
+                    <th>Standard/Degree</th>
+                    <th>Year of Passing</th>
+                </tr>
+                <tr>
+                    <td>United Institute of Management, Prayagraj</td>
+                    <td>Bachelor's in Computer Application</td>
+                    <td>2023</td>
+                </tr>
+                <tr>
+                    <td>Crosthwaite Girls College, Prayagraj</td>
+                    <td>Intermediate</td>
+                    <td>2020</td>
+
+                </tr>
+                <tr>
+                    <td>Crosthwaite Girls College, Prayagraj</td>
+                    <td>High School</td>
+                    <td>2018</td>
+                </tr>
+                </table>
+
+        </section>
+    </main>
+    <footer>
+        <div class="footer">
+           <div class="footer-first">
+            <h3>Srishti's Portfolio</h3>
+           </div>
+           <a href="https://www.linkedin.com/in/srishtisingh18"><div class="footer-second"><img src="linkdin.png" style="height:35px; width:40px;"></div></a>
+           <a href="/"><div class="footer-third"><img src="website-icon-8.png" style="height:35px; width:40px;"></div></a>
+           <a href="https://www.youtube.com/@code_syntax/featured"><div class="footer-fourth"><img src="youtube.png"style="height:35px;
+           width:40px;"></a></div>
+        </div>
+        <div class="footer-right">Copyright &#169;	www.srishtisportfolio.com | All rights reserved</div>
+    </footer>
+
+   <script src="https://unpkg.com/typed.js@2.0.16/dist/typed.umd.js"></script>
+   <script>
+    var typed = new Typed('#element', {
+      strings: ['Web Developer.','Graphic Designer.','Web Designer.'],
+      typeSpeed: 50,
+    });
+  </script>
+
+  
+  </table>
+
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="index.js"></script>
+  
+
+</body>
+</html>
